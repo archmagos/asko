@@ -1,7 +1,7 @@
-site: Asko
+site: Kylie
 url: #yoururl
-title: Asko
-description: Simple and minimalistic jekyll blogging theme.
+title: Kylie
+description: Jekyll theme
 googlewebfonts: Fira+Code:wght@400;500;700
 twitter:
   username: #yourusername
@@ -21,7 +21,7 @@ highlighter: rouge
 
 exclude:
   - .jekyll-cache
-  
+
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
