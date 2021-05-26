@@ -18,10 +18,12 @@ html {
   --medium-text-color: #555;
   --main-text-color: #E7E6F5;
   --dark-text-color: #111;
-  --strong-text-color: #EF626C;
-
   --link-color: #419AF6;
   --link-color-hover: #64ADF7;
+
+  --light-emphasis-color: var(--light-text-color);
+  --emphasis-color: #EF626C;
+  --very-dark-emphasis-color: #1D2135;
 
   background-color: #151828;
 }
@@ -53,7 +55,7 @@ a {
 
 code,
 pre {
-  background: var(--very-light-text-color);
+  background: var(--very-dark-emphasis-color);
 }
 
 code {
@@ -74,9 +76,10 @@ img {
 }
 
 hr {
-  background: var(--main-text-color);
-  height: 1px;
+  background: var(--light-emphasis-color);
   border: 0;
+  height: 1px;
+  margin: 0.5rem 0;
 }
 
 header {
@@ -107,22 +110,18 @@ section {
 }
 
 section.posts {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 
 blockquote {
+  border-left: 5px solid var(--emphasis-color);
   font-style: italic;
-  border-left: 5px solid var(--very-light-text-color);
+  margin: 0.5rem 0;
   padding-left: 1rem;
 }
 
 h1 {
-  color: var(--light-text-color);
   text-transform: uppercase;
-}
-
-h3 {
-  color: var(--light-text-color);
 }
 
 h1,
@@ -130,6 +129,7 @@ h2,
 h3,
 h4,
 h5 {
+  color: var(--light-text-color);
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 1.5rem;
@@ -142,7 +142,7 @@ section h1:first-child {
 strong,
 b {
   font-weight: normal;
-  color: var(--strong-text-color);
+  color: var(--emphasis-color);
 }
 
 .photos ul {
@@ -156,10 +156,6 @@ b {
 .photo picture,
 .project picture {
   margin-bottom: 0.5rem;
-}
-
-.posts>h3 {
-  font-weight: 500;
 }
 
 .posts ul,
@@ -200,7 +196,12 @@ time {
 }
 
 .post>time {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post ul {
+  margin: 0.5rem 0;
+  padding-inline-start: 2.5rem;
 }
 
 main {
